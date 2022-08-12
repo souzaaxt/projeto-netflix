@@ -8,10 +8,23 @@ export const Container = styled.div`
    .mainContainer {
     display: flex;
     flex-direction: row;
+
     gap: 0.5rem;
     overflow-x: scroll;
 
-    
+    margin-bottom: 2rem;
+
+    ::-webkit-scrollbar-thumb {
+        background: crimson;
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar {
+        background: #1d1d1d;
+        width: 5px;
+        border-radius: 10px;
+    }
+
     .moviesList {
         display: flex;
         flex-direction: row;
@@ -46,6 +59,26 @@ export const Container = styled.div`
    }
 
    @media (max-width: 768px) {
-    
+    padding: 0 1rem;
+    .mainContainer {
+
+        .moviesList {
+
+            main {
+
+
+                section {
+
+
+                    .card {
+                        
+                        img {
+                            width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
    }
 `;

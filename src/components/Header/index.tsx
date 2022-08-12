@@ -1,6 +1,8 @@
 import { HeaderContainer } from "./style";
 
 import LogoNetflix from '../../assets/Netflix-Logo.wine.svg'
+import { Bell, MagnifyingGlass } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 export function Header () {
     return (
@@ -20,9 +22,9 @@ export function Header () {
                     </ul>
                 </div>
                 <div className="menu-perfil">
-                    <li>Lupa</li>
-                    <li>Infantil</li>
-                    <li>Sino</li>
+                    <li><MagnifyingGlass size={20} color="#f7f7f7" /></li>
+                    <li><Link to='/profile'>Infantil</Link></li>
+                    <li><Bell size={20} color="#f7f7f7" /></li>
                     <li>Perfil</li>
                 </div>
             </div>
