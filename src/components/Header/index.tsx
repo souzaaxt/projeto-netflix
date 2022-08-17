@@ -23,7 +23,12 @@ export function Header () {
                 </div>
                 <div className="menu-perfil">
                     <li><MagnifyingGlass size={20} color="#f7f7f7" /></li>
-                    <li><Link to='/profile'>Infantil</Link></li>
+                    <li>
+                        <Link to='/profile'>
+                            <img 
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPsVAeFlYeYOEUzb3TV1ML91_LPkkFML5lRQcMdr9nQu2CqO-WzT-RLmkM5_cOKvkaBkI&usqp=CAU" alt="account" />
+                        </Link>
+                    </li>
                     <li><Bell size={20} color="#f7f7f7" /></li>
                     <li>Perfil</li>
                 </div>

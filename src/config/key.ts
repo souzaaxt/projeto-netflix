@@ -1,3 +1,0 @@
-export const Key = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzOTIxOWEwZmRmMzY5ZjI3N2JjNTVhZTg3NjVlODdiMiIsInN1YiI6IjYyZjI2NTczNTE0YzRhMDA3ZjhjMDkwOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.W7iW8pUBto56ePsT8xXk7WnL3RrtxR0ovo60seo9mhc';
-
-export const posterImgUrl = 'https://image.tmdb.org/t/p/w500/';

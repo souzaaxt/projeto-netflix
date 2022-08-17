@@ -45,6 +45,14 @@ export const HeaderContainer = styled.header`
             gap: 1.5rem;
             margin-right: 1rem;
 
+            li {
+                display: flex;
+                align-items: center;
+                img {
+                    height: 25px;
+                }
+            }
+
             li:last-child {
                 margin-right: 1.5rem;
             }
