@@ -103,10 +103,7 @@ export const Container = styled.div`
                     }
 
                     .card {
-                        
-                        img {
-                            height: 220px;
-                        }
+                        height: 220px;
                     }
                 }
             }

@@ -5,7 +5,6 @@ import { Container } from './styles';
 export function SectionMovies() {
   return (
     <Container>
-    <>
       {categories.map((category: any) => {
         return (
           <Row 
@@ -16,9 +15,6 @@ export function SectionMovies() {
           />
         )
       })}
-    </>
-
- 
     </Container>
   );
 }

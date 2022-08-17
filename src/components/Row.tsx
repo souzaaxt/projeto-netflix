@@ -19,10 +19,8 @@ function Row({ title, path, isLarge }: any) {
         }
     }
     useEffect(() => {
-        setTimeout(() => {
-            fetchMovies(path)
-            setRemoveLoading(true)
-        },3000)
+        fetchMovies(path)
+        setRemoveLoading(true)
     }, [path]);
     
 
