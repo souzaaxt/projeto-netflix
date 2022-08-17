@@ -1,6 +1,8 @@
 import { HeaderContainer } from "./style";
 
 import LogoNetflix from '../../assets/Netflix-Logo.wine.svg'
+import LogoNetflixMobile from '../../assets/netflix-seeklogo.com.svg'
+
 import { Bell, MagnifyingGlass } from "phosphor-react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +12,8 @@ export function Header () {
             <div className="header">
                 <div className="menu-fix">
                     <ul>
-                        <img src={ LogoNetflix } alt="Logo" />
+                        <img src={ LogoNetflix } alt="Logo" className="logo-desktop" />
+                        <img src={ LogoNetflixMobile } alt="Logo" className="logo-mobile" />
                     </ul>
                     <ul>
                         <li>Inicio</li>

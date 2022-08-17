@@ -8,7 +8,6 @@ export const HeaderContainer = styled.header`
             justify-content: space-between;
             align-items: center;
             
-            
             position: fixed;
             top: 0;
             left: 0;
@@ -22,32 +21,35 @@ export const HeaderContainer = styled.header`
             z-index: 1000;
 
             .menu-fix {
-                /* max-width: 100rem; */
-            display: flex;
-            gap: 2rem;
-
-            justify-content: space-between;
-            align-items: center;
-            
-            ul {
                 display: flex;
-                flex-direction: row;
+                gap: 2rem;
 
-                gap: 1.5rem;
+                justify-content: space-between;
+                align-items: center;
+                
+                ul {
+                    display: flex;
+                    flex-direction: row;
 
-                > img {
-                    height: 100px;
+                    gap: 1.5rem;
+
+                    .logo-desktop {
+                        height: 100px;
+                    }
+                    .logo-mobile {
+                        display: none;
+                    }
                 }
-            }
         }
         .menu-perfil {
             display: flex;
             gap: 1.5rem;
             margin-right: 1rem;
 
+            align-items: center;
+
             li {
                 display: flex;
-                align-items: center;
                 img {
                     height: 25px;
                 }
@@ -67,6 +69,23 @@ export const HeaderContainer = styled.header`
 
                 li {
                     display: none;
+                }
+            }
+
+            .menu-fix {
+                ul {
+                    display: flex;
+                    padding: 1rem;
+
+                    align-items: center;
+
+                    .logo-desktop {
+                        display: none;
+                    }
+                    .logo-mobile {
+                        width: 20px;
+                        display: flex;
+                    }
                 }
             }
 

@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import { getMovies } from '../config/api';
+import Loading from './Loading/Loading';
 
 const HostImage = 'https://image.tmdb.org/t/p/w500'
 
 function Row({ title, path, isLarge }: any) {
     const [movies, setMovies] = React.useState([]);
+    const [removeLoading, setRemoveLoading] = React.useState(false)
 
     const fetchMovies = async (_path: any) => {
         try {
@@ -17,8 +19,10 @@ function Row({ title, path, isLarge }: any) {
         }
     }
     useEffect(() => {
-    fetchMovies(path)
-      
+        setTimeout(() => {
+            fetchMovies(path)
+            setRemoveLoading(true)
+        },3000)
     }, [path]);
     
 
@@ -46,6 +50,7 @@ function Row({ title, path, isLarge }: any) {
             </section>
         </main>
             </div>
+                {!removeLoading && <Loading />}
         </div >
     </>
   )
