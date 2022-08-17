@@ -3,7 +3,15 @@ import categories, { getMovies } from '../../config/api';
 import { BannerContainer } from './style'
 
 function Banner() {
-    const [movie, setMovie] = React.useState({});
+    interface MovieProps {
+        name: string;
+        title: string;
+        original_name: string;
+        backdrop_path: string;
+        overview: any;
+    }
+
+    const [movie, setMovie] = React.useState<MovieProps>();
     const fetchRandomMovie = async () => {
         try {
             const netflixOriginalsCategory = categories.find(category => category.name === 'originals')
@@ -20,7 +28,7 @@ function Banner() {
     useEffect(() => {
     fetchRandomMovie();
     }, []);
-    function truncate(str, n) {
+    function truncate(str: string, n: number) {
         return str?.length > n ? str.substring(0, n - 1) + "..." : str;
       }
     
@@ -30,7 +38,6 @@ function Banner() {
         <header className="banner-content" style={{
             backgroundSize: 'cover',
             backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-            roundPosition: 'center-center',
             }}
         >
             <div className="banner-content">

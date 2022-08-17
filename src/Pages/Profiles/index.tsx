@@ -11,12 +11,6 @@ import { Link } from "react-router-dom";
 
 export function Profiles () {
 
-    // function handleSubmit (event: FormEvent<HTMLElement>) {
-    //     event.preventDefault();
-    //     // alert('Acessando...')
-    //     BackdropExample();
-    // }
-
     return (
         <ChakraProvider theme={ theme }>
         <ProfilesContainer>
