@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import categories, { getMovies } from '../../config/api';
+import Loading from '../Loading/Loading';
 import { BannerContainer } from './style'
 
 function Banner() {
@@ -10,6 +11,8 @@ function Banner() {
         backdrop_path: string;
         overview: any;
     }
+
+    const [removeLoading, setRemoveLoading] = React.useState(false)
 
     const [movie, setMovie] = React.useState<MovieProps>();
     const fetchRandomMovie = async () => {
@@ -27,6 +30,7 @@ function Banner() {
 
     useEffect(() => {
     fetchRandomMovie();
+    setRemoveLoading(true)
     }, []);
     function truncate(str: string, n: number) {
         return str?.length > n ? str.substring(0, n - 1) + "..." : str;
@@ -52,7 +56,7 @@ function Banner() {
                     {truncate(movie?.overview, 250)}
                 </div>
             </div>
-            
+            {!removeLoading && <Loading />}
         </header>
     </BannerContainer>
   )
